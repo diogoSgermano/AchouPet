@@ -16,5 +16,18 @@
   "bugs": {
     "url": "https://github.com/diogoSgermano/AchouPet/issues"
   },
-  "homepage": "https://github.com/diogoSgermano/AchouPet#readme"
+  "homepage": "https://github.com/diogoSgermano/AchouPet#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-react": "^7.27.1",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  }
 }
