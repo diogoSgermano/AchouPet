@@ -1,21 +1,20 @@
-const express = require("express");
-const exphbs = require("express-handlebars");
-const path = require("path");
+import express from "express";
+import exphbs from "express-handlebars";
 
 const app = express();
 
 // Configuração do Handlebars
-app.engine("handlebars", exphbs.engine());
+app.engine("handlebars", exphbs.engine({defaultLayout: "home"}));
 app.set("view engine", "handlebars");
 
-// Caminho correto para a pasta views
-app.set("views", path.join(__dirname, "../../views"));
-
-// Rota
-app.get("/", (req, res) => {
-  res.render("home", { nome: "Letícia" });
+app.get("/", function(_req, res) {
+  res.render("inicio");
 });
 
-app.listen(3000, () => {
-  console.log("Servidor rodando em http://localhost:3000");
+app.get("/animais", function(_req, res) {
+  res.render("animais");
+} );
+app.listen(8080, () => {
+  console.log("Servidor rodando em http://localhost:8080");
 });
+

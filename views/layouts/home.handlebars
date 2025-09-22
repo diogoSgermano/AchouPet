@@ -1,34 +1,11 @@
-<h2>Bem-vindo ao AchouPet, {{nome}}!</h2>
-<p>Cadastre seus pets perdidos ou encontrados abaixo:</p>
-
-<!-- Formulário para cadastrar pet perdido/encontrado -->
-<form action="/cadastrar-pet" method="POST">
-  <label for="nomePet">Nome do Pet:</label>
-  <input type="text" id="nomePet" name="nomePet" required>
-
-  <label for="tipoPet">Tipo de Animal:</label>
-  <select id="tipoPet" name="tipoPet" required>
-    <option value="cachorro">Cachorro</option>
-    <option value="gato">Gato</option>
-    <option value="outro">Outro</option>
-  </select>
-
-  <label for="statusPet">Status:</label>
-  <select id="statusPet" name="statusPet" required>
-    <option value="perdido">Perdido</option>
-    <option value="encontrado">Encontrado</option>
-  </select>
-
-  <button type="submit">Cadastrar Pet</button>
-</form>
-
-<hr>
-
-<!-- Lista de pets cadastrados -->
-<h3>Pets cadastrados recentemente:</h3>
-<ul>
-  {{#each pets}}
-    <li>
-      {{this.nome}} - {{this.tipo}} - {{this.status}}
-    </li>
-  {{/each}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express-handlebars</title>
+</head>
+<body>
+    {{{body}}}
+</body>
+</html>
