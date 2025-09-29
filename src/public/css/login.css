@@ -62,7 +62,7 @@ html {
 }
 
 body{
-    background-color: #FFFEF8;
+    background-color: #BCDFFF;
 }   
 
 .bg-fundo{
@@ -75,7 +75,7 @@ body{
 }
 
 .logo-img {
-    height: 150px; /* Altura reduzida para o logo */
+    height: 500px; /* Altura reduzida para o logo */
     width: auto;
     margin-top: 1rem;
 }
