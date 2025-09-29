@@ -1,0 +1,177 @@
+.body, html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    overflow: hidden; /* Impede a rolagem do body */
+    border-radius: 0px !important;
+    
+}
+html {
+    scroll-behavior: smooth;    
+}
+.textIntrod-inicio {
+    color:#112446;  
+    padding-right: 790px; /* Cuidado: este valor é muito alto e pode empurrar o texto para fora da tela. */     
+}   
+.title-inicio {
+    color:#112446;  
+    padding-right: 800px; /* Cuidado: este valor é muito alto e pode empurrar o texto para fora da tela. */
+    font-weight: 700; /* Peso máximo da fonte Comfortaa importada */
+    /* Truque para engrossar a fonte com um contorno */
+    -webkit-text-stroke: 0.5px #112446; /* Para navegadores como Chrome, Safari, Edge */
+}
+
+.navbar-nav {   
+    display: flex;
+    gap: 50px;
+    margin-top: 1rem;
+    font-family: Comfortaa, cursive;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 600px !important;
+}
+
+.custom-entrar-btn {
+    background-color: #1383EE !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    padding: 10px 32px;
+    min-width: 120px;
+    height: 48px;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    margin-top: 1rem;   
+    
+}
+
+.custom-anunciar-btn {
+    background-color: #fff;
+    color: #1383EE;
+    border: 5px solid #1383EE;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    min-width: 120px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.btnEntrarAnunciar {    
+    display: flex;
+    gap: 10px;
+  font-family: 'Comfortaa', sans-serif, bold;
+  font-weight: 700; 
+    margin-right: 20px;
+
+}
+
+body{
+    background-color: #FFFEF8;
+}   
+
+.bg-fundo{
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa a altura total da janela */
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin: 1px !important;
+}
+
+.logo-img {
+    height: 150px; /* Altura reduzida para o logo */
+    width: auto;
+    margin-top: 1rem;
+}
+.bg-navbar{
+    flex-shrink: 0; /* Impede que a navbar encolha */
+    background-color: #FFFFFF !important;
+    height: 50px;
+    margin-bottom: 0px;
+}
+
+/* Media query para telas menores (como celulares) */
+@media (max-width: 991.98px) {
+    .btnEntrarAnunciar {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        width: 100%;
+        margin-top: 1rem; /* Adiciona um espaço acima dos botões */
+    }
+}
+
+.main-content {
+    margin-left: 10px;  /* Mesma margem esquerda do rodapé */
+    margin-right: 10px; /* Mesma margem direita do rodapé */
+    padding-left: 100px; /* Preenchimento interno para o conteúdo não colar na borda */
+    padding-right:100px;/* Preenchimento interno para o conteúdo não colar na borda */
+}
+
+.custom-footer {
+    flex-shrink: 0; /* Impede que o rodapé encolha */
+    background-color: #e3f2fd; /* cor de fundo */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* espaça os botões */
+    align-items: center;
+    border: 2px solid #1383EE;
+    margin: 10px;
+    height: 70px;
+    border-radius: 100px !important;
+}
+
+.custom-voltar-btn {
+    border-radius: 100px;
+    padding: 10px 32px;
+    font-weight: 700;
+    color: #1383EE;
+    border: 2px solid #1383EE;
+    background: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+.custom-voltar-btn:hover {
+    background: #1383EE;
+    color: #fff;
+}
+
+.custom-comentarios-btn {
+    border-radius: 100px;
+    padding: 10px 32px;
+    font-weight: 700;
+    background: #1383EE;
+    color: #fff;
+    border: none;
+    transition: background 0.2s;
+}
+.custom-comentarios-btn:hover {
+    background: #0a5bb5;
+}
+
+/* Estilização da barra de rolagem para navegadores WebKit (Chrome, Safari, Edge) */
+main::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+    margin: 0px;
+}
+
+/* Estiliza o fundo (trilha) da barra de rolagem */
+main::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo da trilha */
+    border-radius: 10px;
+}
+
+/* Estiliza o "polegar" (a parte que você arrasta) da barra de rolagem */
+main::-webkit-scrollbar-thumb {
+    background-color: #1383EE; /* Cor azul principal do seu site */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 3px solid #f1f1f1; /* Cria um espaçamento ao redor do polegar */
+}
+
+/* Estiliza o "polegar" ao passar o mouse sobre ele */
+main::-webkit-scrollbar-thumb:hover {
+    background: #0a5bb5; /* Um tom de azul mais escuro para o efeito hover */
+}
