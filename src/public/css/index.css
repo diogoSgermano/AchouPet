@@ -13,7 +13,7 @@ html {
 }
 .textIntrod-inicio {
     color:#112446;  
-    padding-right: 790px; /* Cuidado: este valor é muito alto e pode empurrar o texto para fora da tela. */     
+    padding-right: 79   0px; /* Cuidado: este valor é muito alto e pode empurrar o texto para fora da tela. */     
 }   
 .title-inicio {
     color:#112446;  
@@ -21,6 +21,12 @@ html {
     font-weight: 700; /* Peso máximo da fonte Comfortaa importada */
     /* Truque para engrossar a fonte com um contorno */
     -webkit-text-stroke: 0.5px #112446; /* Para navegadores como Chrome, Safari, Edge */
+}
+
+.img-inicio {
+    text-align: end; /* Centraliza a imagem horizontalmente */
+    margin-top: 20px; /* Espaço acima da imagem */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */ ;
 }
 
 .navbar-nav {   

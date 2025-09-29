@@ -1,43 +1,0 @@
-
-var ftGUID_7922483="6460D7C606D8D7";
-var ftConfID_7922483="0";
-var ftParams_7922483="ftOBA=1&ft_domain=pt.pngtree.com&ft_ifb=1&ft_agentEnv=0&ft_referrer=https://pt.pngtree.com/freepng/woman-hugging-happy-dog-and-cat-on-white-background_21515000.html&us_privacy=${US_PRIVACY}&site_url=https://pt.pngtree.com/freepng/woman-hugging-happy-dog-and-cat-on-white-background_21515000.html&pub_id=1&sup_platform=1&cachebuster=420460.6885212223";
-var ftKeyword_7922483="";
-var ftCustom_7922483="";
-var ftSection_7922483="";
-var ftSegment_7922483="";
-var ftSegmentList_7922483=[];
-var ftRuleMatch_7922483="0";
-var ftTimestamp_7922483="1759185205";
-var ftGeoC2_7922483="br";
-var ftGeoState_7922483="sc";
-var ftGeoCity_7922483="joinville";
-var ftISP_7922483="machado mascarelo sonorizacao ltda";
-var ftSpeed_7922483="broadband";
-var ftConnType_7922483="wifi";
-var ftDMA_7922483="76026";
-var ftLong_7922483="-48.85";
-var ftLat_7922483="-26.25";
-var ftPostal_7922483="89219-710";
-var ftTimeZone_7922483="-300";
-var ftMobileCarrier_7922483="";
-var ftImp7922483 = {};
-ftImp7922483.privacy = "x";
-ftImp7922483.guidAge = "21";
-ftImp7922483.impID = "C82DF69D-3070-5DF0-1773-1F649F8096A0";
-ftImp7922483.duid = "FT:6460D7C606D8D7";
-
-ftImp7922483.ft_tpplid = "";
-ftImp7922483.ft_c = {};
-ftImp7922483.gdpr = "";
-ftImp7922483.gdpr_consent = "";
-ftImp7922483.gdpr_pd = "";
-ftImp7922483.oob_consent = "";
-ftImp7922483.gdprStoredConsent = "";
-ftImp7922483.us_privacy = "!!US_PRIVACY!";
-ftImp7922483.gpc = "";
-
-ftImp7922483.jsAppend = "1";
-var ftCreativeId_7922483 = "5491376";
-(function(){var tag=document.getElementById("ft_servedby_7922483")||function(s){return s[s.length-1]}(document.getElementsByTagName("script")),js=document.createElement("script");js.src="https://ajs-assets.ftstatic.com/ftUtils.js";js.id="ftscript_m7922483";js.setAttribute("name","ftscript_m7922483");tag.parentNode.insertBefore(js,tag)})();window.fTChecker=window.fTChecker||function(id){if(!id)return false;id=""+id;if(window.hasOwnProperty("ftUtils")){window["ft"+id]=Object.assign({},window.ftUtils.common);window["ft"+id].getBannerConfig(id)}else(function(id){window.setTimeout(function(){window.fTChecker(id)},50)})(id)};window.fTChecker("7922483");
-
