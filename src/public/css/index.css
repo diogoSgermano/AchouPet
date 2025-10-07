@@ -4,50 +4,54 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Comfortaa', cursive;
-    overflow: hidden; /* Impede a rolagem do body */
     border-radius: 0px !important;
-    
 }
 html {
     scroll-behavior: smooth;    
 }
 
+.header-container {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px; /* Adiciona um pouco de espaço nas laterais */
+}
+
+.flex-grow-1{
+margin-top: 0px !important;
+
+}
 .textIntrod-inicio {
     color:#112446;
-    max-width: 50%; /* Ocupa no máximo 50% da largura para não ir para baixo da imagem */
 }   
 .title-inicio {
     color:#112446;  
-    max-width: 60%; /* Ocupa no máximo 60% da largura */
     font-weight: 700; /* Peso máximo da fonte Comfortaa importada */
     /* Truque para engrossar a fonte com um contorno */
     -webkit-text-stroke: 0.5px #112446; /* Para navegadores como Chrome, Safari, Edge */
 }
+@media (max-width: 991.98px) {
+    .navbar-collapse{
+        background-color: rgb(255, 255, 255);
+        border-radius: 30px;
+        padding: 10px;
+        border : 2px solid #1383EE;
+        margin-top: 300px;
+        align-items: center;
+    }
+}
 
-
-.divImg-inicio {
-    position: absolute; /* Remove do fluxo normal do documento */
-    top: 0; /* Alinha ao topo do container pai (main-content) */
-    right: 100px; /* Alinha à direita, com o mesmo padding do main-content */
-    height: 100%; /* Ocupa a altura total do container */
+.divImg-inicio {    
     display: flex;
-    background-color: violet;
-    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; /* Centraliza a imagem na coluna */
+    align-items: center;
 }
 
 .img-mulher-inicio {
-    height: 350px; /* Altura da imagem */
-    width: auto; /* Largura automática para manter a proporção */
-}
-
-.navbar-nav {   
-    display: flex;
-    gap: 50px;
-    margin-top: 1rem;
-    font-family: Comfortaa, cursive;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-left: 600px !important;
+    height: auto; /* Altura da imagem */
+    width: auto; /* Largura automática para manter a proporção */    
 }
 
 .custom-entrar-btn {
@@ -62,7 +66,6 @@ html {
     display: flex;
     align-items: center;    
     justify-content: center;
-    margin-top: 1rem;   
     
 }
 
@@ -77,20 +80,17 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+
 }
 .btnEntrarAnunciar {    
     display: flex;
     gap: 10px;
-  font-family: 'Comfortaa', sans-serif, bold;
+  font-family: 'Comfortaa', sans-serif;
   font-weight: 700; 
     margin-right: 20px;
+    margin-top: 20px;
 
 }
-
-body{
-    background-color: #FFFEF8;
-}   
 
 .bg-fundo{
     display: flex;
@@ -98,21 +98,26 @@ body{
     height: 100vh; /* Ocupa a altura total da janela */
     background-color: #FFFFFF;
     border-radius: 10px;
-    margin: 1px !important;
+    margin: 0px !important;
 }
 
 .logo-img {
-    height: 200px; /* Define uma altura fixa para o logo */
-    width: auto;  /* A largura se ajusta para manter a proporção */
-    margin-top: 1rem; /* Ajusta a margem para centralizar verticalmente */
-}
-.bg-navbar{
-    flex-shrink: 0; /* Impede que a navbar encolha */
-    background-color: #FFFFFF !important;
-    height: 50px;
-    margin-bottom: 0px;
+    height: 200px;      /* Altura da logo ajustada para a navbar */
+    width: 200px;       /* A largura se ajustará para manter a proporção */    
+    display: flex;
+    justify-content: left; /* Centraliza a imagem horizontalmente */
+    
 }
 
+#diogo{
+    padding-top: 10px;
+}
+
+.bg-navbar{ 
+    flex-shrink: 0; /* Impede que a navbar encolha */
+    background-color: #FFFFFF !important;
+    padding-right: 10PX;
+}
 /* Media query para telas menores (como celulares) */
 @media (max-width: 991.98px) {
     .btnEntrarAnunciar {
@@ -123,22 +128,23 @@ body{
 }
 
 .main-content {
-    margin-left: 10px;  /* Mesma margem esquerda do rodapé */
-    margin-right: 10px; /* Mesma margem direita do rodapé */
-    padding-left: 100px; /* Preenchimento interno para o conteúdo não colar na borda */
-    padding-right:100px;/* Preenchimento interno para o conteúdo não colar na borda */
+    flex-grow: 1; /* Faz o conteúdo principal crescer para ocupar o espaço */
+    margin-left: 20px;  /* Mesma margem esquerda do rodapé */
+    margin-right: 20px; /* Mesma margem direita do rodapé */
+    padding-left: 15px; /* Preenchimento interno para o conteúdo não colar na borda */
+    padding-right: 15px;/* Preenchimento interno para o conteúdo não colar na borda */
+    
 }
 
 .custom-footer {
     flex-shrink: 0; /* Impede que o rodapé encolha */
     background-color: #e3f2fd; /* cor de fundo */
-    padding: 20px;
+    padding: 6px;
     display: flex;
     justify-content: space-between; /* espaça os botões */
     align-items: center;
     border: 2px solid #1383EE;
-    margin: 10px;
-    height: 70px;
+    margin: 1px;
     border-radius: 100px !important;
 }
 

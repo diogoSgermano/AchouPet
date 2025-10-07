@@ -3,24 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Comfortaa', cursive;
-    overflow: hidden; /* Impede a rolagem do body */
+      font-family: 'Comfortaa', sans-serif, bold;
     border-radius: 0px !important;
-    
 }
 html {
     scroll-behavior: smooth;    
-}
-
-
-.navbar-nav {   
-    display: flex;
-    gap: 50px;
-    margin-top: 1rem;
-    font-family: Comfortaa, cursive;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-left: 600px !important;
 }
 
 .custom-entrar-btn {
@@ -75,14 +62,14 @@ body{
 }
 
 .logo-img {
-    height: 500px; /* Altura reduzida para o logo */
-    width: auto;
-    margin-top: 1rem;
+    width: 90%; /* A imagem ocupará 70% da largura do seu container */
+    max-width: 450px; /* Define uma largura máxima para não ficar gigante em telas grandes */
+    height: auto; /* A altura se ajustará automaticamente para manter a proporção */
 }
 .bg-navbar{
     flex-shrink: 0; /* Impede que a navbar encolha */
     background-color: #FFFFFF !important;
-    height: 50px;
+    height: 260px;
     margin-bottom: 0px;
 }
 
