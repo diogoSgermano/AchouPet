@@ -19,40 +19,78 @@ html {
     padding: 0 20px; /* Adiciona um pouco de espaço nas laterais */
 }
 
+.navbar-nav{
+    margin-top: 1rem;
+    margin-right: 10px;
+    
+}
 .flex-grow-1{
 margin-top: 0px !important;
 
 }
+.inicio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
+    align-items: center; /* Centraliza os itens verticalmente na grade */
+    gap: 20px; /* Espaço entre o texto e a imagem */
+    padding: 20px 50px;
+}
 .textIntrod-inicio {
     color:#112446;
+    max-width: 800px; /* Usa max-width para responsividade */
 }   
 .title-inicio {
     color:#112446;  
+    font-size: 3.5rem;
+    max-width: 900px;
     font-weight: 700; /* Peso máximo da fonte Comfortaa importada */
-    /* Truque para engrossar a fonte com um contorno */
+    /* Truque para engrossar a   com um contorno */
     -webkit-text-stroke: 0.5px #112446; /* Para navegadores como Chrome, Safari, Edge */
 }
-@media (max-width: 991.98px) {
-    .navbar-collapse{
-        background-color: rgb(255, 255, 255);
-        border-radius: 30px;
-        padding: 10px;
-        border : 2px solid #1383EE;
-        margin-top: 300px;
-        align-items: center;
-    }
-}
 
-.divImg-inicio {    
+.divImg-inicio { 
+    background-color: #c1D4F6;
+    position: absolute;
+    left: 950px; 
+    top: 150px;
+    border-radius: 1000px;
+    width: 500px; /* Mantém o tamanho do círculo */
+    height: 500px;
     display: flex;
-    justify-content: center; /* Centraliza a imagem na coluna */
+    justify-content: center;
     align-items: center;
+    overflow: hidden; /* Garante que a imagem não saia do círculo */
+    justify-self: center; /* Centraliza o círculo na sua coluna da grade */
 }
 
 .img-mulher-inicio {
-    height: auto; /* Altura da imagem */
-    width: auto; /* Largura automática para manter a proporção */    
+    width: 100%; /* Faz a imagem preencher o círculo */
+    height: auto;
+    object-fit: cover; /* Garante que a imagem cubra o círculo sem distorção */
 }
+
+
+@media (max-width: 1200px) {
+    .inicio-container {
+        grid-template-columns: 1fr; /* Coluna única em telas menores */
+        text-align: center;
+    }
+
+    .navbar-collapse{
+        background-color: rgb(251, 33, 33);
+        border-radius: 20px;
+        padding: 30px;
+        border : 2px solid #1383EE;
+        position: absolute; /* Ajuda a posicionar sobre outros elementos */
+        top: 80px; /* Ajuste a distância do topo conforme necessário */
+        right: 20px; /* Alinha à direita */
+        width:auto;
+       /* Largura total para telas pequenas */
+        z-index: 1000; /* Garante que o menu fique sobre outros conteúdos */
+    }
+}
+
+
 
 .custom-entrar-btn {
     background-color: #1383EE !important;
@@ -109,30 +147,18 @@ margin-top: 0px !important;
     
 }
 
-#diogo{
-    padding-top: 10px;
-}
 
 .bg-navbar{ 
-    flex-shrink: 0; /* Impede que a navbar encolha */
-    background-color: #FFFFFF !important;
-    padding-right: 10PX;
+    background-color: #bb0c0c00 !important; 
 }
 /* Media query para telas menores (como celulares) */
-@media (max-width: 991.98px) {
-    .btnEntrarAnunciar {
-        flex-direction: column; /* Empilha os botões verticalmente */
-        width: 100%;
-        margin-top: 1rem; /* Adiciona um espaço acima dos botões */
-    }
-}
 
 .main-content {
     flex-grow: 1; /* Faz o conteúdo principal crescer para ocupar o espaço */
     margin-left: 20px;  /* Mesma margem esquerda do rodapé */
     margin-right: 20px; /* Mesma margem direita do rodapé */
-    padding-left: 15px; /* Preenchimento interno para o conteúdo não colar na borda */
-    padding-right: 15px;/* Preenchimento interno para o conteúdo não colar na borda */
+    padding-left: 45px; /* Preenchimento interno para o conteúdo não colar na borda */
+    padding-right: 45px;/* Preenchimento interno para o conteúdo não colar na borda */
     
 }
 
