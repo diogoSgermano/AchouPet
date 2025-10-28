@@ -1,81 +1,117 @@
-.body, html, body {
-    height: 100%;
-    margin: 0;
-    padding: 2;
-    box-sizing: border-box;
-    font-family: 'Comfortaa', cursive;
-    font-weight: bold; 
-    border-radius: 0px !important;
+/* Reset e base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  background-color: #BCDFFF;
+  scroll-behavior: smooth;
+  border-radius: 0 !important;
 }
-html {
-    scroll-behavior: smooth;    
-}
 
-
-
+/* Botão de entrada */
 .custom-entrar-btn {
-    background-color: #112446 !important;
-    color: #fff !important;
-    border: black !important;
-    border-radius: 300px;
-    font-size: 1rem;
-    padding: 4px 10px;  
-    height: 47px;
-    display: flex;
-    align-items: center;    
-    justify-content: center;
-    margin-top: 1rem;   
-    width: 80px;
+  background-color: #112446 !important;
+  color: #fff !important;
+  border: 1px solid black !important;
+  border-radius: 300px;
+  font-size: 1rem;
+  padding: 4px 10px;
+  height: 47px;
+  width: 300px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-
-body{
-    background-color: #BCDFFF;
-}   
-
-.logo-img {
-    width: 80%;
-    max-width: 400px; /* Define uma largura máxima para não ficar gigante em telas grandes */
-    height: auto; /* A altura se ajustará automaticamente para manter a proporção */
-}
-
+/* Conteúdo principal */
 .main-content {
-    margin-left: 20%;  /* Mesma margem esquerda do rodapé */
-    margin-right: 10%; /* Mesma margem direita do rodapé */
-    padding-left: 15%; /* Preenchimento interno para o conteúdo não colar na borda */
-    padding-right: 15%;/* Preenchimento interno para o conteúdo não colar na borda */
+  margin-left: 20%;
+  margin-right: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
-
+/* Barra de rolagem personalizada */
 main::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
-    margin: 0px;
+  width: 12px;
 }
 
-/* Estiliza o fundo (trilha) da barra de rolagem */
 main::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor de fundo da trilha */
-    border-radius: 10px;
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-/* Estiliza o "polegar" (a parte que você arrasta) da barra de rolagem */
 main::-webkit-scrollbar-thumb {
-    background-color: #1383EE; /* Cor azul principal do seu site */
-    border-radius: 10px; /* Bordas arredondadas */
-    border: 3px solid #f1f1f1; /* Cria um espaçamento ao redor do polegar */
+  background-color: #1383EE;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
 }
 
-/* Estiliza o "polegar" ao passar o mouse sobre ele */
 main::-webkit-scrollbar-thumb:hover {
-    background: #0a5bb5; /* Um tom de azul mais escuro para o efeito hover */
+  background: #0a5bb5;
 }
 
-#email,#password{
-    background-color: #ffffff;
-    border-radius: 100px;
-    border: 1px solid #000000;
+/* Campos de formulário */
+.campos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+#email,
+#password {
+  background-color: #ffffff;
+  border-radius: 100px;
+  border: 1px solid #000000;
+  width: 100%; /* Ocupa a largura do container */
+}
 
+.text-container{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
 
+@media (max-width: 1200px) {
+  .campos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  }
+}
 
+.campos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 82px;
+  }
+
+.criar {
+  position: fixed;
+  bottom: 20px; /* distância do final da tela */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #112446;
+  z-index: 1000;
+}
+
+.criar a {
+  text-decoration: underline;
+  color: #000000;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.criar a:hover {
+  color: #000000;
+}

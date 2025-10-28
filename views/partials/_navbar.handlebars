@@ -1,43 +1,52 @@
-<nav class="navbar navbar-expand-xl bg-navbar"> 
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-xl bg-navbar" style="padding: 0 2rem;">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+
+    <!-- Logo à esquerda -->
+    <a class="navbar-brand" href="/" style="margin-right: 42rem;" style="margin-right: auto;">
+      <img src="/images/achoupet.png" alt="AchouPet Logo" style="height: 60px; width: auto;">
+    </a>
+
+    <!-- Botão hamburguer para mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavContent">
-      <ul class="navbar-nav">
+
+    <!-- Menu + botões à direita -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavContent">
+      <ul class="navbar-nav me-3">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Busca
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Busca</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Opção 1</a></li>
             <li><a class="dropdown-item" href="#">Opção 2</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Adote
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Adote</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Opção 1</a></li>
             <li><a class="dropdown-item" href="#">Opção 2</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Conheça
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conheça</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Opção 1</a></li>
             <li><a class="dropdown-item" href="#">Opção 2</a></li>
           </ul>
         </li>
       </ul>
-    
-      <div class="d-flex btnEntrarAnunciar ms-auto">
-        <button class="btn btn-primary custom-entrar-btn" type="button"><span style="font-weight:700;">Entrar</span></button>
-        <button class="btn btn-primary custom-anunciar-btn" type="button"><span style="font-weight:700;">Anunciar</span></button>
-      </div>
+
+      <div class="botaoentrar">
+        <a href="/signIn" class="btn btn-primary custom-entrar-btn d-flex align-items-center" role="button ">
+            <span style="font-weight:580;">Entrar</span>
+        </a>
+    </div>
+    <div class="botaoanunciar">
+        <a href="/signIn" class="btn btn-primary custom-anunciar-btn d-flex align-items-center" role="button ">
+            <span style="font-weight:580;">Anunciar</span>
+        </a>
+    </div>
     </div>
   </div>
 </nav>

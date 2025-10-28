@@ -1,0 +1,15 @@
+<h1>Cadastro de Pet Perdido</h1>
+<p>Preencha os dados abaixo para anunciar seu pet perdido.</p>
+
+<form action="/cadastrar-pet" method="POST">
+  <label for="nome">Nome do Pet:</label>
+  <input type="text" id="nome" name="nome" required>
+
+  <label for="descricao">Descrição:</label>
+  <textarea id="descricao" name="descricao" required></textarea>
+
+  <label for="local">Último local visto:</label>
+  <input type="text" id="local" name="local" required>
+
+  <button type="submit">Cadastrar</button>
+</form>

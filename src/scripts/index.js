@@ -39,6 +39,17 @@ app.get("/comentarios", function(_req, res) {
   res.render("comentarios");
 });
 
+app.get("/redefinir", function(_req, res) {
+  // Aqui, especificamos que a view 'login' deve usar o layout 'main'
+  res.render("redefinirsenha", { layout: "login" });
+});
+
+app.get("/criar", function(_req, res) {
+  // Aqui, especificamos que a view 'login' deve usar o layout 'main'
+  res.render("criarconta", { layout: "login" });
+});
+
 app.listen(8080, () => {
   console.log("Servidor rodando em http://localhost:8080");
+  console.log("Animais: http://localhost:8080/animais")
 });
