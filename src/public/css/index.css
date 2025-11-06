@@ -25,6 +25,10 @@ html {
     margin-top: 1rem;
 }
 
+.custom-footer{
+    bottom: 10px;
+}
+
 .flex-grow-1{
 margin-top: 0% !important;
 
@@ -174,41 +178,27 @@ margin-top: 0% !important;
     border-radius: 100px !important;
 }
 
-
-.custom-comentarios-btn {
-    border-radius: 100px;
-    padding: 10px 32px;
-    font-weight: 700;
-    background: #1383EE;
-    color: #fff;
-    border: none;
-    transition: background 0.2s;
-}
-.custom-comentarios-btn:hover {
-    background: #0a5bb5;
-}
-
 /* Estilização da barra de rolagem para navegadores WebKit (Chrome, Safari, Edge) */
 main::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
+    width: 12px;
     margin: 0px;
 }
 
 /* Estiliza o fundo (trilha) da barra de rolagem */
 main::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor de fundo da trilha */
+    background: #f1f1f1; 
     border-radius: 10px;
 }
 
 main::-webkit-scrollbar-thumb {
-    background-color: #1383EE; /* Cor azul principal do seu site */
-    border-radius: 10px; /* Bordas arredondadas */
-    border: 3px solid #f1f1f1; /* Cria um espaçamento ao redor do polegar */
+    background-color: #1383EE; 
+    border-radius: 10px; 
+    border: 3px solid #f1f1f1; 
 }
 
 /* Estiliza o "polegar" ao passar o mouse sobre ele */
 main::-webkit-scrollbar-thumb:hover {
-    background: #0a5bb5; /* Um tom de azul mais escuro para o efeito hover */
+    background: #0a5bb5; 
 }
 
 .custom-pesquisar-btn {
@@ -250,4 +240,55 @@ main::-webkit-scrollbar-thumb:hover {
 
 .textIntrod-inicio {
   margin-top: 15px;
+}
+
+.divImg-inicio {
+    background-color: #c1D4F6;
+    width: 50vw; /* 40% da largura da tela */
+    height: 50vw; /* mantém o formato circular */
+    max-width: 500px; /* evita que fique muito grande em telas grandes */
+    max-height: 500px;
+    min-width: 400px; /* e nem muito pequena */
+    min-height: 400px;
+    border-radius: 50%; /* Forma mais comum de fazer um círculo */
+    overflow: hidden; /* Garante que a imagem não saia do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-pet {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 15px 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Botão Voltar */
+.custom-voltar-btn {
+  background-color: #ffffff;
+  color: #112446;
+  border: 1px solid black;
+  border-radius: 300px;
+  font-size: 1rem;
+  padding: 8px 20px;
+}
+
+/* Botão Comentários */
+.custom-comentarios-btn {
+  background-color: #1383EE;
+  color: #fff;
+  border: none;
+  border-radius: 300px;
+  font-size: 1rem;
+  padding: 8px 20px;
 }

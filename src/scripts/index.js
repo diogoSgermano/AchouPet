@@ -29,6 +29,10 @@ app.get("/animais", function(_req, res) {
   res.render("animais");
 });
 
+app.get("/anunciar", function(_req, res){
+  res.render("anunciar");
+});
+
 app.get("/signIn", function(_req, res) {
   // Aqui, especificamos que a view 'login' deve usar o layout 'main'
   res.render("signIn", { layout: "login" });
@@ -44,9 +48,24 @@ app.get("/redefinir", function(_req, res) {
   res.render("redefinirsenha", { layout: "login" });
 });
 
+app.get("/novasenha", function(_req, res) {
+  // Aqui, especificamos que a view 'login' deve usar o layout 'main'
+  res.render("novasenha", { layout: "login" });
+});
+
 app.get("/criar", function(_req, res) {
   // Aqui, especificamos que a view 'login' deve usar o layout 'main'
   res.render("criarconta", { layout: "login" });
+});
+
+app.get("/criarsenha", function(_req, res) {
+  // Aqui, especificamos que a view 'login' deve usar o layout 'main'
+  res.render("criarsenha", { layout: "login" });
+});
+
+app.get("/opcoes", function(_req, res) {
+  // Aqui, especificamos que a view 'login' deve usar o layout 'main'
+  res.render("opcoes", { layout: "login" });
 });
 
 app.listen(8080, () => {

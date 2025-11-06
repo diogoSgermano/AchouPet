@@ -1,7 +1,24 @@
-<div class="inicio-container">
-    <div class="criar">
-                <a href="/criar" role="button">
-                    <span style="font-weight:580;">Não tem uma conta? Cadastre-se</span>
-                </a>
-    </div> 
-</div> 
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4 campos">
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email ou CPF</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="password" required>
+        </div>
+        <div class="redefinir">
+          <a href="/redefinir" class="d-flex align-items-center" role="button">
+            <span style="font-weight:580;">Redefinir senha</span>
+          </a>
+        </div>
+       {{>_entrar link="/anunciar" texto="Entrar" }}  
+      {{>_voltar link="/" }} 
+      </form>
+      {{>_conta}} 
+    </div>
+  </div>
+</div>
