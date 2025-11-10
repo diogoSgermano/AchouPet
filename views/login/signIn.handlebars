@@ -11,14 +11,16 @@
           <input type="password" class="form-control" id="password" required>
         </div>
         <div class="redefinir">
-          <a href="/redefinir" class="d-flex align-items-center" role="button">
+          <a href="/login/redefinirsenha" class="d-flex align-items-center" role="button">
             <span style="font-weight:580;">Redefinir senha</span>
           </a>
         </div>
-       {{>_entrar link="/anunciar" texto="Entrar" }}  
-      {{>_voltar link="/" }} 
+       {{>_entrar link="/animais" texto="Entrar" }}  
+       {{>_voltar link="/" }} 
+      <div class="naoPossuiConta">Não possui conta? <div class="crieUmaConta" ><a href="/login/criarconta">crie uma !</a></div></div>
       </form>
-      {{>_conta}} 
+      
     </div>
   </div>
 </div>
+<script src=""></script>

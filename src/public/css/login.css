@@ -52,13 +52,13 @@ html, body {
 }
 
 /* Campos de formulário */
-#email, #password {
+.camposred .form-control {
   background-color: #ffffff;
   border-radius: 100px;
   border: 1px solid #000000;
   width: 100%;
   padding: 10px 20px;
-  margin-bottom: 1px;
+  margin-bottom: 1rem; /* Adicionado para espaçamento */
 }
 
 /* Botão de entrada */
@@ -97,9 +97,10 @@ html, body {
 }
 
 /* Link de cadastro fixo no rodapé */
-.criar {
-  position: fixed;
-  bottom: 20px;
+.naoPossuiConta {
+  position: absolute;
+  top: 635px;
+  margin-right: 5px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -109,14 +110,15 @@ html, body {
   color: #112446;
 }
 
-.criar a {
+.crieUmaConta {
   text-decoration: underline;
   color: #000000;
   font-weight: 600;
+  margin-left: 5px;
   transition: color 0.3s ease;
 }
 
-.criar a:hover {
+.crieUmaConta:hover {
   color: #0a5bb5;
 }
 
@@ -154,7 +156,6 @@ html, body {
   font-size: 1rem;
   margin-bottom: px;
 }
-
 
 .camposred {
   display: flex;
