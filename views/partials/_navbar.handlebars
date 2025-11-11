@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-xl bg-navbar" style="padding: 0 2rem;">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
+  <div class="container-fluid d-flex justify-content-center align-items-center" style="gap: 5rem;">
 
     <!-- Logo à esquerda -->
-    <a class="navbar-brand" href="/" style="margin-right: 42rem;" style="margin-right: auto;">
+    <a class="navbar-brand" href="/">
       <img src="/images/achoupet.png" alt="AchouPet Logo" style="height: 60px; width: auto;">
     </a>
 
@@ -12,8 +12,8 @@
     </button>
 
     <!-- Menu + botões à direita -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavContent">
-      <ul class="navbar-nav me-3">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavContent">
+      <ul class="navbar-nav mx-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Busca</a>
           <ul class="dropdown-menu">
@@ -37,16 +37,18 @@
         </li>
       </ul>
 
-      <div class="botaoentrar">
-        <a href="/login/signIn" class="btn btn-primary custom-entrar-btn d-flex align-items-center" role="button ">
-            <span style="font-weight:580;">Entrar</span>
-        </a>
-    </div>
-    <div class="botaoanunciar">
-        <a href="/anunciar" class="btn btn-primary custom-anunciar-btn d-flex align-items-center" role="button ">
-            <span style="font-weight:580;">Anunciar</span>
-        </a>
-    </div>
+      <div class="d-flex">
+        <div class="botaoentrar">
+            <a href="/login/signIn" class="btn btn-primary custom-entrar-btn d-flex align-items-center" role="button ">
+                <span style="font-weight:580;">Entrar</span>
+            </a>
+        </div>
+        <div class="botaoanunciar">
+            <a href="/anunciar" class="btn btn-primary custom-anunciar-btn d-flex align-items-center" role="button ">
+                <span style="font-weight:580;">Anunciar</span>
+            </a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

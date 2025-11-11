@@ -1,16 +1,66 @@
-<div class="anunciarcontainer">
-  <div class="anunciar">
-      <form>
-          <div class="mb-3">
-            <label for="email" class="form-label">Crie uma senha</label>
-            <input type="email" class="form-control" id="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Repita a senha</label>
-            <input type="password" class="form-control" id="password" required>
-          </div>
-      </form>
+<form class="anun" action="/animais" method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="especie">Espécie</label>
+    <select class="form-control" id="especie" name="especie" required>...</select>
   </div>
-  {{>_footer}}
+
+  <div class="mb-3">
+    <label for="genero">Gênero</label>
+    <select class="form-control" id="genero" name="genero" required>...</select>
+  </div>
+
+  <div class="mb-3">
+    <label for="situacao">Situação</label>
+    <select class="form-control" id="situacao" name="situacao" required>...</select>
+  </div>
+
+  <div class="mb-3">
+    <label for="foto">Foto</label>
+    <input type="file" class="form-control" id="foto" name="foto" accept="image/*" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="detalhes">Mais detalhes</label>
+    <textarea class="form-control" id="detalhes" name="detalhes" rows="4" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" name="nome" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="idade">Idade</label>
+    <input type="text" class="form-control" id="idade" name="idade" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="raca">Raça</label>
+    <input type="text" class="form-control" id="raca" name="raca" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="data">Data</label>
+    <input type="date" class="form-control" id="data" name="data" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="dono">Dono</label>
+    <input type="text" class="form-control" id="dono" name="dono" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="contato">Contato</label>
+    <input type="text" class="form-control" id="contato" name="contato" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="local">Último local</label>
+    <input type="text" class="form-control" id="local" name="local" required>
+  </div>
+</form>
+
+
+  {{> _footer texto="Publicar"}}
   {{>_filtros}}
 </div>

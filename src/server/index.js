@@ -51,6 +51,10 @@ app.get("/comentarios", function(_req, res) {
   res.render("comentarios");
 });
 
+app.get("/visualizaranimal", function(_req, res) {
+  res.render("visualizaranimal");
+});
+
 app.get("/login/redefinirsenha", function(_req, res) {
   // Aqui, especificamos que a view 'login' deve usar o layout 'main'
   res.render("login/redefinirsenha", { layout: "login" });
@@ -148,6 +152,43 @@ app.post("/login/criarsenha/:userId", async (req, res) => {
     res.status(500).send("Ocorreu um erro de segurança ao processar sua senha.");
   }
 });
+
+// Rota POST para verificar se o usuário existe ao tentar fazer login
+app.post("/login/verificarUsuario", (req, res) => {
+  const { emailEntrar, senhaEntrar } = req.body;
+
+  // Consulta que busca o usuário pelo email ou CPF
+  const sql = `
+    SELECT u.id, u.email, u.cpf, s.senha 
+    FROM usuarios u 
+    JOIN senhas s ON u.id = s.id_usuario 
+    WHERE u.email = ? OR u.cpf = ?
+  `;
+
+  db.query(sql, [emailEntrar, emailEntrar], async (err, results) => {
+    if (err) {
+      console.error("Erro ao buscar usuário:", err);
+      return res.status(500).json({ success: false, message: "Erro no servidor." });
+    }
+
+    if (results.length === 0) {
+      // Usuário não encontrado
+      return res.json({ success: false, message: "Usuário não encontrado." });
+    }
+
+    // Usuário encontrado — agora verificar a senha
+    const usuario = results[0];
+    const senhaCorreta = await bcrypt.compare(senhaEntrar, usuario.senha);
+
+    if (!senhaCorreta) {
+      return res.json({ success: false, message: "Senha incorreta." });
+    }
+
+    // Tudo certo
+    res.json({ success: true });
+  });
+});
+
 
 
 app.listen(8080, () => {
