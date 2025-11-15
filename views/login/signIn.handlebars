@@ -1,41 +1,18 @@
-<div class="main-content">
-  <h1 class="title-inicio">Animais perdidos</h1>
-
-  <div class="row row-cols-1 row-cols-md-2 g-4 anun">
-    <!-- Card 1 - Perdido -->
-    <div class="col">
-      <div class="card h-100 border-primary" style="border-radius: 20px;">
-        <img src="/images/preston.png" class="card-img-top" alt="Preston" style="height: 250px; object-fit: cover; border-radius: 20px 20px 0 0;">
-        <div class="card-body">
-          <h5 class="card-title" style="color: #112446;">Preston</h5>
-          <p class="card-text" style="color: #ff0000; font-weight: bold;">Status: Perdido</p>
-          <p class="card-text">Local: Itinga, Joinville</p>
+<div class="containercadastro">
+  <div class="camposred">
+    <div class="col-md-10 col-lg-8 campos">
+      <form action="/login" method="POST">
+        <div class="mb-3">
+          <label for="email" class="form-label">Insira seu e-mail</label>
+          <input type="email" class="form-control" id="email" name="email" required>
         </div>
-      </div>
-    </div>
-
-    <!-- Card 2 - Perdido -->
-    <div class="col">
-      <div class="card h-100 border-primary" style="border-radius: 20px;">
-        <img src="/images/jade.jpg" class="card-img-top" alt="Jade" style="height: 250px; object-fit: cover; border-radius: 20px 20px 0 0;">
-        <div class="card-body">
-          <h5 class="card-title" style="color: #112446;">Jade</h5>
-          <p class="card-text" style="color: #ff0000; font-weight: bold;">Status: Perdido</p>
-          <p class="card-text">Local: Centro, Joinville</p>
+        <div class="mb-3">
+          <label for="password" class="form-label">Insira sua senha</label>
+          <input type="password" class="form-control" id="password" name="password" required>
         </div>
-      </div>
-    </div>
-
-    <!-- Card 3 - Encontrado -->
-    <div class="col">
-      <div class="card h-100 border-success" style="border-radius: 20px;">
-        <img src="/images/tody.jpg" class="card-img-top" alt="Tody" style="height: 250px; object-fit: cover; border-radius: 20px 20px 0 0;">
-        <div class="card-body">
-          <h5 class="card-title" style="color: #112446;">Tody</h5>
-          <p class="card-text" style="color: green; font-weight: bold;">Status: Encontrado</p>
-          <p class="card-text">Local: Itaum, Joinville</p>
-        </div>
-      </div>
+        {{>_submit texto="Entrar" }}
+        <p class="text-center mt-3">Não tem uma conta? <a href="/login/criarconta">Cadastre-se</a></p>
+      </form>
     </div>
   </div>
 </div>
