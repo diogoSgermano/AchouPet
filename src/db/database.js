@@ -15,5 +15,4 @@ db.connect(function (err) {
 
 
 
-
 export default db;

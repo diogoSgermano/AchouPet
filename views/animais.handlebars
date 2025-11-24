@@ -1,43 +1,31 @@
 <div class="main-content">
-  <h1 class="title-inicio">Animais perdidos</h1>
+  <h3 class="mb-5 text-center">Animais anunciados</h3>
 
+  {{!-- O loop #each irá iterar sobre a lista de 'animais' passada pelo servidor --}}
   <div class="anun">
-    <!-- Card 1 - Perdido -->
+    {{#each animais}}
     <div class="card mb-4" style="border: 2px solid #1383EE; border-radius: 20px; padding: 20px;">
-      <div style="display: flex; align-items: center; gap: 20px;">
-        <img src="/images/preston.png" alt="Preston" style="width: 120px; height: 120px; border-radius: 20px; object-fit: cover;">
-        <div>
-          <h3 style="margin: 0; color: #112446;">Preston</h3>
-          <p style="margin: 4px 0; font-weight: bold; color: #ff0000;">Status: Perdido</p>
-          <p style="margin: 0;">Local: Itinga, Joinville</p>
+      <a href="/animais/{{this.id}}" style="text-decoration: none; color: inherit;">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="/{{this.foto_url}}" alt="{{this.nome}}" style="width: 120px; height: 120px; border-radius: 20px; object-fit: cover;">
+          <div>
+            <h3 style="margin: 0; color: #112446;">{{this.nome}}</h3>
+            <p class="{{#if (isPerdido this.situacao)}}status-perdido{{else}}status-encontrado{{/if}}" style="margin: 4px 0; font-weight: bold;">
+  Status: {{this.situacao}}
+</p>
+            <p style="margin: 0;">Local: {{this.ultimo_local}}</p>
+          </div>
         </div>
+      </a>
+      <div style="display:flex; justify-content:flex-end; margin-top:12px;">
+        <a href="/animais/{{this.id}}/comentarios" class="btn custom-comentarios-btn">Comentar</a>
       </div>
     </div>
-
-    <!-- Card 2 - Perdido -->
-    <div class="card mb-4" style="border: 2px solid #1383EE; border-radius: 20px; padding: 20px;">
-      <div style="display: flex; align-items: center; gap: 20px;">
-        <img src="/images/jade.jpg" alt="Jade" style="width: 120px; height: 120px; border-radius: 20px; object-fit: cover;">
-        <div>
-          <h3 style="margin: 0; color: #112446;"><a href="/visualizaranimal" style="color: inherit; text-decoration: none;">Jade</a></h3>
-          <p style="margin: 4px 0; font-weight: bold; color: #ff0000;">Status: Perdido</p>
-          <p style="margin: 0;">Local: Centro, Joinville</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 - Encontrado -->
-    <div class="card mb-4" style="border: 2px solid #1383EE; border-radius: 20px; padding: 20px;">
-      <div style="display: flex; align-items: center; gap: 20px;">
-        <img src="/images/tody.jpg" alt="Tody" style="width: 120px; height: 120px; border-radius: 20px; object-fit: cover;">
-        <div>
-          <h3 style="margin: 0; color: #112446;">Tody</h3>
-          <p style="margin: 4px 0; font-weight: bold; color: green;">Status: Encontrado</p>
-          <p style="margin: 0;">Local: Itaum, Joinville</p>
-        </div>
-      </div>
-    </div>
+    {{else}}
+    <p>Nenhum animal anunciado ainda.</p>
+    {{/each}}
   </div>
 </div>
 
+{{> _filtros}}
 {{> _footer}}

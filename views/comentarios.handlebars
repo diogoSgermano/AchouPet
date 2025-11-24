@@ -1,26 +1,28 @@
-<div class="main-content">
+<div class="comments-page">
+  <div class="main-content">
   <h1 class="title-inicio">Comentários (2)</h1>
 
-  <!-- Informações do animal -->
-  <div class="inicio-container">
-    <!-- Foto do animal -->
-    <div class="divImg-inicio">
-      <img src="/images/jade.jpg" alt="Jade" class="img-mulher-inicio">
-    </div>
+  
 
-    <!-- Dados do animal -->
-    <div class="text-container">
-      <h2 style="color: #112446;">Jade</h2>
-      <p>Status: <strong style="color: red;">Perdido(a)</strong></p>
-      <p>Idade: 11 anos</p>
-      <p>Sexo: Fêmea</p>
-      <p>Pelagem: Preta com caramelo</p>
-      <p>Raça: S.R.D.</p>
-      <p>Desaparecida em: 03/02/2025</p>
-      <p>Dono(a): Geraldo</p>
-      <p>Contato: (47) 99949-9420</p>
+  {{#with animal}}
+    <!-- Informações do animal -->
+    <div class="inicio-container">
+      <!-- Foto do animal -->
+      <div class="divImg-inicio">
+        <img src="/{{foto_url}}" alt="Foto de {{nome}}" class="img-mulher-inicio">
+      </div>
+
+      <!-- Dados do animal -->
+      <div class="text-container">
+        <h2 style="color: #112446;">{{nome}}</h2>
+        <p>Status: <strong class="{{#if (eq situacao 'Perdido')}}status-perdido{{else}}status-encontrado{{/if}}">{{situacao}}</strong></p>
+        <p>Idade: {{idade}} anos</p>
+        <p>Sexo: {{genero}}</p>
+        <p>Raça: {{raca}}</p>
+        <p>Contato: {{contato}}</p>
+      </div>
     </div>
-  </div>
+  {{/with}}
 
   <!-- Comentários -->
   <div style="margin-top: 40px;">
@@ -40,13 +42,16 @@
   <!-- Adicionar Comentário -->
   <div style="margin-top: 40px;">
     <h3 style="color: #112446;">Adicionar um comentário</h3>
-    <form action="" method="POST" style="margin-top: 20px;">
+    <form id="adicionar-comentario" action="" method="POST" style="margin-top: 20px;">
       <div class="mb-3">
         <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Escreva seu comentário aqui..." required style="border-radius: 20px;"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Comentar</button>
+      <div class="d-flex justify-content-end" style="margin-top:12px;">
+        <button type="submit" class="btn custom-comentarios-btn"><span style="font-weight:580;">Comentar</span></button>
+      </div>
     </form>
   </div>
-</div>
+  </div>
 
-{{> _footer }}
+  {{>_voltar link="/animais"}}
+</div>

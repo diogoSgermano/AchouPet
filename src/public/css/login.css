@@ -234,4 +234,95 @@ html, body {
 .voltar-ajuste .custom-voltar-btn {
   margin-top: 13%;
 }
+.custom-comentarios-btn {
+  background-color: #1383EE;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 780px;
+}
 
+.custom-voltar-btn:hover {
+  background-color: #cfcfcf;
+  transform: scale(1.05);
+}
+
+.custom-comentarios-btn:hover {
+  background-color: #0a5bb5;
+  transform: scale(1.05);
+}
+
+/* Ajuste do span dentro do botão Comentários */
+.custom-comentarios-btn span {
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+/*fim rodapé*/
+ 
+/* menu filtro */
+.divImgFiltros{
+  background-color: #112446;
+}
+.btn-filtro {
+  position: absolute;
+  top: 100px;
+  left: 6%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  line-height: 0;
+  z-index: 100;
+  background-color: #112446 !important;
+}
+
+.img-filtro {
+  width: 45px;   /* tamanho do botão */
+  height: auto;
+  display: block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-filtro:hover .img-filtro {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.menu-filtros {
+  position: fixed;
+  top: 53%; 
+  left: 50%;
+  margin-top: 45px;
+  padding: 20px;
+  transform: translate(-50%, -50%); 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 95%;
+  background-color: #D9ECFF;
+  z-index: 1000;
+}
+
+.btn-success{
+  background-color: #ffffff;
+  color: #1383EE;
+  border: 2px solid #1383EE;
+  border-radius: 100px;
+}
+
+/* fim menu filtro*/
+
+.anun{
+  position: relative;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+   z-index: 20;
+}
