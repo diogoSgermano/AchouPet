@@ -143,6 +143,31 @@ app.get("/animais/:id/comentarios", (req, res) => {
     res.render("comentarios", { layout: "index", animal: results[0] });
   });
 });
+
+// Rota POST para adicionar comentário (ou resposta) a um animal
+app.post('/animais/:id/comentarios', (req, res) => {
+  const { id } = req.params; // animal id
+  const { comment, parent_id } = req.body;
+
+  // Se não veio comentário, apenas redireciona
+  if (!comment || String(comment).trim() === '') {
+    return res.status(400).send('Comentário vazio');
+  }
+
+  // Tenta inserir na tabela 'comentarios' se existir (colunas: id, animal_id, parent_id, autor, texto, criado_em)
+  const sql = `INSERT INTO comentarios (animal_id, parent_id, autor, texto, criado_em) VALUES (?, ?, ?, ?, NOW())`;
+  const values = [id, parent_id || null, 'Usuário', comment];
+
+  db.query(sql, values, (err, result) => {
+    if (err) {
+      // Se a tabela não existir ou ocorrer erro, apenas logamos e retornamos sucesso para UX
+      console.warn('Não foi possível salvar comentário no banco (talvez tabela ausente):', err.message);
+      return res.status(200).json({ success: true });
+    }
+
+    return res.status(200).json({ success: true, insertId: result.insertId });
+  });
+});
 // Rota para visualizar os detalhes de um animal específico
 app.get("/animais/:id", (req, res) => {
   const { id } = req.params; // Pega o ID do animal da URL

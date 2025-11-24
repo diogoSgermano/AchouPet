@@ -28,14 +28,25 @@
   <div style="margin-top: 40px;">
     <h3 style="color: #112446;">Comentários</h3>
 
-    <div style="margin-top: 20px; border: 2px solid #1383EE; border-radius: 20px; padding: 20px;">
+    <div id="comments-list">
+    <div class="comment-card" data-comment-id="1" style="margin-top: 20px; border: 2px solid #1383EE; border-radius: 20px; padding: 20px; position: relative;">
       <p><strong>João Silva</strong> <span style="color: #888;">08/09/2025</span></p>
       <p>Acho que vi ela perto do mercado popular em torno de 15h ontem</p>
+      <div style="margin-top:12px;">
+        <button class="btn custom-comentarios-btn reply-btn" data-comment-id="1">Comentar</button>
+      </div>
+      <!-- container for replies -->
+      <div class="replies-container" style="margin-top:12px;"></div>
     </div>
 
-    <div style="margin-top: 20px; border: 2px solid #1383EE; border-radius: 20px; padding: 20px;">
+    <div class="comment-card" data-comment-id="2" style="margin-top: 20px; border: 2px solid #1383EE; border-radius: 20px; padding: 20px; position: relative;">
       <p><strong>Leticia G.</strong> <span style="color: #888;">08/09/2025</span></p>
       <p>Eu também, vi no msm horário</p>
+      <div style="margin-top:12px;">
+        <button class="btn custom-comentarios-btn reply-btn" data-comment-id="2">Comentar</button>
+      </div>
+      <div class="replies-container" style="margin-top:12px;"></div>
+    </div>
     </div>
   </div>
 
@@ -55,3 +66,5 @@
 
   {{>_voltar link="/animais"}}
 </div>
+
+<script src="/js/comentarios.js"></script>

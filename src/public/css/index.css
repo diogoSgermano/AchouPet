@@ -404,6 +404,33 @@ main::-webkit-scrollbar-thumb:hover {
   color: #198754 !important; /* verde (opcional) */
   font-weight: 700;
 }
+/* Replies styling (respostas a comentários) */
+.replies-container {
+  margin-left: 36px; /* indenta replies abaixo do comentário pai */
+}
+
+.reply-card {
+  border: 2px solid #1383EE;
+  border-radius: 16px;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: #f6fbff; /* leve fundo para distinguir */
+  max-width: calc(100% - 36px);
+}
+
+.reply-card p {
+  margin: 6px 0;
+  color: #112446;
+}
+
+.reply-card p strong {
+  font-weight: 700;
+}
+
+/* Make comment cards visually consistent */
+.comment-card {
+  background-color: #ffffff;
+}
 /* Comentários: garantir fundo branco para a página de comentários */
 .comments-page {
   background-color: #ffffff !important;
